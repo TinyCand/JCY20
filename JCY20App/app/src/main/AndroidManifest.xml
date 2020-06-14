@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.jcy20.demo">
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_dog"
@@ -9,23 +11,13 @@
         android:roundIcon="@mipmap/ic_dog"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".let08SeniorView.SeniorViewActivity">
+        <activity android:name=".lect09Data.DataPersistenceActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <!--  -->
-        <activity android:name=".lect07intent.MyWebActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.VIEW" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-                <category android:name="android.intent.category.BROWSABLE" />
-
-                <data android:scheme="http" />
-            </intent-filter>
+        <activity android:name=".let08SeniorView.SeniorViewActivity">
         </activity>
         <activity android:name=".lect07intent.CActivity">
             <intent-filter>
@@ -37,8 +29,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".lect07intent.FlagActivity" />
-        <activity android:name=".lect07intent.IntentActivity">
-        </activity>
+        <activity android:name=".lect07intent.IntentActivity"></activity>
         <activity
             android:name=".lec06Act.ModeActivity"
             android:launchMode="singleInstance"
@@ -60,6 +51,344 @@
             android:name=".lect05Act.CustomActivity"
             android:icon="@mipmap/ic_launcher"
             android:label="@string/custom_label" />
+
+
+        <activity android:name=".lect07intent.MyWebActivity">
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http" />
+            </intent-filter>
+
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.PROCESS_TEXT" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <data
+                    android:mimeType="text/plain" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="http" />
+                <data
+                    android:scheme="https" />
+                <data
+                    android:scheme="about" />
+                <data
+                    android:scheme="ucweb" />
+                <data
+                    android:scheme="javascript" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="ut.21711551" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="flyme_3dtouch"
+                    android:host="com.UCMobile"
+                    android:path="/open_my_video_window" />
+
+                <data
+                    android:scheme="flyme_3dtouch"
+                    android:host="com.UCMobile"
+                    android:path="/open_info_flow_channel_window" />
+
+                <data
+                    android:scheme="flyme_3dtouch"
+                    android:host="com.UCMobile"
+                    android:path="/open_novel_bookshelf_window" />
+            </intent-filter>
+
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="uclink"
+                    android:host="www.uc.cn"
+                    android:pathPrefix="/cc77796ca7c25dff9607d31b29effc07" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="market"
+                    android:host="details" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="http"></data>
+
+                <data
+                    android:mimeType="text/html" />
+
+                <data
+                    android:mimeType="text/xml" />
+
+                <data
+                    android:mimeType="application/xhtml+xml" />
+
+                <data
+                    android:mimeType="application/vnd.wap.xhtml+xml" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.WEB_SEARCH" />
+
+                <action
+                    android:name="android.intent.action.SEARCH" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.WEB_SEARCH" />
+
+                <action
+                    android:name="android.intent.action.SEARCH" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <!--<data
+                    android:scheme="@string/0x3f" />-->
+
+                <data
+                    android:scheme="http" />
+
+                <data
+                    android:scheme="https" />
+
+                <data
+                    android:scheme="about" />
+
+                <data
+                    android:scheme="ucweb" />
+
+                <data
+                    android:scheme="javascript" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="com.UCMobile.intent.action.LOADURL" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="com.UCMobile.intent.action.WEBSEARCH" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="com.UCMobile.intent.action.LOADBUFFER" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="com.UCMobile.intent.action.INVOKE" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="com.UCMobile.intent.action.OPENFILEMANAGER" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="com.UCMobile.intent.action.OPENVIDEO" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="com.UCMobile.intent.action.BARCODESCAN" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="com.UCMobile.intent.action.NOTIFICATION_TOOL_SETTING" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="android.net.http.NETWORK_STATE" />
+
+                <action
+                    android:name="android.intent.action.PROXY_CHANGE" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <data
+                    android:scheme="file" />
+
+                <data
+                    android:scheme="content" />
+
+                <data
+                    android:scheme="ucweb" />
+
+                <data
+                    android:mimeType="text/html" />
+
+                <data
+                    android:mimeType="text/xml" />
+
+                <data
+                    android:mimeType="application/xhtml+xml" />
+
+                <data
+                    android:mimeType="application/vnd.wap.xhtml+xml" />
+
+                <data
+                    android:mimeType="text/css" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:scheme="ftp" />
+
+                <data
+                    android:scheme="thunder" />
+
+                <data
+                    android:scheme="ed2k" />
+
+                <data
+                    android:scheme="flashget" />
+
+                <data
+                    android:scheme="magnet" />
+            </intent-filter>
+
+            <intent-filter>
+
+                <action
+                    android:name="android.intent.action.VIEW" />
+
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+
+                <data
+                    android:scheme="file"
+                    android:host="*" />
+
+                <data
+                    android:scheme="content" />
+
+                <data
+                    android:mimeType="application/x-bttorrent" />
+
+                <data
+                    android:pathPattern=".*\.torrent" />
+            </intent-filter>
+
+
+        </activity>
     </application>
 
 </manifest>
