@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <ImageView
+        android:visibility="visible"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center_horizontal"
+        android:background="#FF0000"
+        android:src="@mipmap/ic_dog"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="20dp"
+        />
+    <TextView
+        android:text="姓名xx0102[粗斜]"
+        android:autoLink="email"
+        android:textColor="#FFFFFF"
+        android:textSize="24sp"
+        android:textStyle="italic|bold"
+        android:background="#FFaa00"
+        android:gravity="right"
+        android:layout_gravity="center_horizontal"
+        android:paddingRight="20dp"
+        android:singleLine="true"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:editable="true"
+        android:hint="请输入用户名"
+        android:maxLength="5"
+        android:paddingLeft="16dp"
+        android:textColorHint="@color/colorAccent" />
+
+    <EditText
+        android:hint="请输入密码"
+        android:inputType="textPassword"
+        android:paddingLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
+    <EditText
+        android:hint="@string/please_input_age"
+        android:inputType="number"
+        android:paddingLeft="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+    <Button
+        android:id="@+id/btn_register"
+        android:text="注册"
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"/>
+
+</LinearLayout>

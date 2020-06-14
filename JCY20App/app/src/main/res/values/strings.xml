@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">JCY20App</string>
+    <string name="my_name">姚老师App</string>
+    <string name="please_input_age">请输入年龄</string>
+    <string name="custom_label">YH05第五课</string>
+</resources>

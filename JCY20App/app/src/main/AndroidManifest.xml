@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.jcy20.demo">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_dog"
+        android:label="@string/my_name"
+        android:roundIcon="@mipmap/ic_dog"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".let08SeniorView.SeniorViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <!--  -->
+        <activity android:name=".lect07intent.MyWebActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data android:scheme="http" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".lect07intent.CActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.DIAL" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+                <data android:scheme="tel" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".lect07intent.FlagActivity" />
+        <activity android:name=".lect07intent.IntentActivity">
+        </activity>
+        <activity
+            android:name=".lec06Act.ModeActivity"
+            android:launchMode="singleInstance"
+            android:theme="@android:style/Theme.Dialog" />
+        <activity
+            android:name=".lec06Act.LifeActivity"
+            android:configChanges="orientation"
+            android:launchMode="standard" />
+        <activity android:name=".lect05Act.EditActivity" />
+        <activity
+            android:name=".lect05Act.ForResultActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/custom_label" />
+        <activity android:name=".lect05Act.DisplayActivity" />
+        <activity android:name=".Les4LayoutActivity" />
+        <activity android:name=".LayoutActivity" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".lect05Act.CustomActivity"
+            android:icon="@mipmap/ic_launcher"
+            android:label="@string/custom_label" />
+    </application>
+
+</manifest>
