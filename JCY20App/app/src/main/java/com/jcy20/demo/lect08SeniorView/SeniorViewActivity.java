@@ -1,4 +1,4 @@
-package com.jcy20.demo.let08SeniorView;
+package com.jcy20.demo.lect08SeniorView;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
@@ -6,10 +6,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.Toast;
 
 import com.jcy20.demo.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SeniorViewActivity extends AppCompatActivity {
 
@@ -42,6 +47,31 @@ public class SeniorViewActivity extends AppCompatActivity {
                 dialog.show();
             }
         });
+
+        /** 以列表展示数据 3个元素，ListView 数据源 Adapter */
+        ListView listView = findViewById(R.id.lv);
+        /* 数据源 */
+        List<News> dataList = new ArrayList<>();
+            for (int i = 0; i < 20; i++) {
+                News item = new News();
+                item.setPicId(R.mipmap.ic_dog);
+                item.setTitle(i+" 同学居然在课堂做这种事情");
+                dataList.add(item);
+        }
+        /* Adapter 绑定ListView 和data 的桥梁 */
+        NewsAdapter adapter = new NewsAdapter(SeniorViewActivity.this, dataList);
+        listView.setAdapter(adapter);
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+
+            }
+        });
+
+
+
+
+
 
     }
 }

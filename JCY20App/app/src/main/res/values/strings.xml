@@ -3,4 +3,7 @@
     <string name="my_name">姚老师App</string>
     <string name="please_input_age">请输入年龄</string>
     <string name="custom_label">YH05第五课</string>
+    <string-array name="weekdays">
+        <item>星期一</item>
+    </string-array>
 </resources>
